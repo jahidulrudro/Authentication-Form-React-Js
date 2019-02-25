@@ -52,7 +52,7 @@ export default class LoginForm extends React.PureComponent {
   }
 
   render() {
-    const { setCurrentForm, setCurrentComponent } = this.props.commonProps
+    const { setCurrentForm } = this.props.commonProps
     const { form, invalidEmail, invalidPassword, submitting } = this.state
     const { email, password, rememberMe } = form
 
@@ -132,7 +132,7 @@ export default class LoginForm extends React.PureComponent {
             <Button
               color="link"
               className="p-0"
-              onClick={() => setCurrentComponent('recover-password')}>
+              onClick={() => setCurrentForm('recover-password')}>
               Forgot Password?
             </Button>
           </Col>

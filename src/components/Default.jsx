@@ -3,6 +3,7 @@ import { Col, Row } from 'reactstrap'
 
 import LoginForm from './LoginForm'
 import RegistrationForm from './RegistrationForm'
+import PasswordRecoverForm from './PasswordRecoverForm'
 
 const formContainerStyle = {
   border: '1px solid rgba(0, 0, 0, 0.2)',
@@ -13,7 +14,8 @@ const formContainerStyle = {
 }
 
 const Default = props => {
-  const { currentForm, logoImage } = props.commonProps
+  const { commonProps } = props
+  const { currentForm, logoImage } = commonProps
 
   return (
     <Row className="h-100" style={{ alignItems: 'center' }}>
@@ -23,11 +25,11 @@ const Default = props => {
             <div style={formContainerStyle}>
               <h1 className="d-sm-block d-md-none">Formalin</h1>
               {currentForm === 'login' ? (
-                <LoginForm commonProps={props.commonProps} />
+                <LoginForm commonProps={commonProps} />
               ) : currentForm === 'register' ? (
-                <RegistrationForm commonProps={props.commonProps} />
+                <RegistrationForm commonProps={commonProps} />
               ) : currentForm === 'recover-password' ? (
-                <h1>Recover Password</h1>
+                <PasswordRecoverForm commonProps={commonProps} />
               ) : (
                 <h1>OTP</h1>
               )}

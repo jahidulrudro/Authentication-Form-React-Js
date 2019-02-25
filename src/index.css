@@ -1,0 +1,4 @@
+/* Import bootstrap css from bootstrap package */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import './assets/css/main.css';

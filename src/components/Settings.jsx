@@ -46,7 +46,9 @@ const Settings = props => {
   const pageDesigns = [
     { designName: 'default', text: 'Default' },
     { designName: 'edge', text: 'Edge' },
-    { designName: 'median', text: 'Median' }
+    { designName: 'median', text: 'Median' },
+    { designName: 'half', text: 'Half' },
+    { designName: 'adha', text: 'Adha' }
   ]
 
   // List of Form Designs
@@ -66,8 +68,8 @@ const Settings = props => {
       <Container className="text-center">
         <h5 className="my-3">Design</h5>
         <Row>
-          {pageDesigns.map(d => (
-            <Col className="mb-1">
+          {pageDesigns.map((d, index) => (
+            <Col className="mb-1 mx-auto" md="6" key={index}>
               <Button
                 color="primary"
                 block
@@ -80,8 +82,8 @@ const Settings = props => {
 
         <h5 className="my-3">Form</h5>
         <Row>
-          {formStyles.map(s => (
-            <Col className="mb-1">
+          {formStyles.map((s, index) => (
+            <Col className="mb-1" key={index}>
               <Button
                 color="primary"
                 block

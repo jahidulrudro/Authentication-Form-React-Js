@@ -3,7 +3,7 @@ import { Fade, Form, Button } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import IconInput from './IconInput'
-import avatar from '../assets/avatar.png'
+import avatar from '../assets/images/avatar.png'
 
 const imageContainerStyle = {
   width: '70px',
@@ -79,7 +79,7 @@ export default class OtpForm extends React.PureComponent {
           {submitting ? (
             <FontAwesomeIcon icon="spinner" className="fa-pulse" />
           ) : (
-            'Reset Password'
+            'Submit'
           )}
         </Button>
       </Fade>

@@ -5,11 +5,15 @@ import OtpForm from './OtpForm'
 import RegistrationForm from './RegistrationForm'
 import PasswordRecoverForm from './PasswordRecoverForm'
 
+import formalinLogo from '../assets/images/formalin.webp'
+
 const formContainerStyle = {
   border: '1px solid rgba(0, 0, 0, 0.2)',
+  backgroundColor: '#fff',
   padding: '30px 35px',
   borderRadius: '5px',
   overflow: 'hidden',
+  position: 'relative',
   boxShadow: '-2px 2px 7px rgba(0, 0, 0, 0.1)'
 }
 
@@ -19,7 +23,12 @@ const FormContainer = props => {
 
   return (
     <div style={formContainerStyle}>
-      <h1 className="d-sm-block d-md-none">Formalin</h1>
+      <img
+        src={formalinLogo}
+        alt="formalin logo"
+        className="mx-auto d-block d-md-none"
+        style={{ width: '120px' }}
+      />
       {currentForm === 'login' ? (
         <LoginForm commonProps={commonProps} />
       ) : currentForm === 'register' ? (

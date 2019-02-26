@@ -127,6 +127,7 @@ export default class LoginForm extends React.PureComponent {
               />
             </FormGroup>
           </Col>
+
           {/* Forgot Password */}
           <Col xs="6" className="text-right">
             <Button

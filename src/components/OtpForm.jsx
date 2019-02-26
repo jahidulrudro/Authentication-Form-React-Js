@@ -10,7 +10,7 @@ const imageContainerStyle = {
   borderRadius: '50%',
   border: '1px solid rgba(0, 0, 0, 0.1)',
   overflow: 'hidden',
-  boxShadow: '2px 2px 7px rgba(0, 0, 0, 0.1)'
+  boxShadow: '-2px 2px 7px rgba(0, 0, 0, 0.1)'
 }
 
 export default class OtpForm extends React.PureComponent {

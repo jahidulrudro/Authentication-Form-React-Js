@@ -10,7 +10,7 @@ const formContainerStyle = {
   padding: '30px 35px',
   borderRadius: '5px',
   overflow: 'hidden',
-  boxShadow: '2px 2px 7px rgba(0, 0, 0, 0.1)'
+  boxShadow: '-2px 2px 7px rgba(0, 0, 0, 0.1)'
 }
 
 const FormContainer = props => {

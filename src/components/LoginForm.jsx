@@ -68,11 +68,11 @@ export default class LoginForm extends React.PureComponent {
 
         <p className="text-center font-weight-bold">Login With</p>
         <p className="d-flex" style={{ justifyContent: 'center' }}>
-          <Button color="danger" className="mr-1">
+          <Button color="danger" className="mr-1" onClick={() => {}}>
             <FontAwesomeIcon icon={['fab', 'google']} className="mr-2" />
             Google
           </Button>
-          <Button color="primary">
+          <Button color="primary" onClick={() => {}}>
             <FontAwesomeIcon icon={['fab', 'facebook-f']} className="mr-2" />
             facebook
           </Button>

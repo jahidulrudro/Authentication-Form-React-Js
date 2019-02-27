@@ -38,9 +38,13 @@ const settingsIconStyle = {
   boxShadow: '-2px 2px 7px rgba(0, 0, 0, 0.1)'
 }
 
+const activeButtonStyle = {
+  boxShadow: '0 0 0 0.2rem rgba(38,143,255,.5)'
+}
+
 const Settings = props => {
   const [visible, setVisible] = useState(true)
-  const { setCurrentForm, setDesign } = props.commonProps
+  const { currentForm, setCurrentForm, design, setDesign } = props.commonProps
 
   // List of Page Designs
   const pageDesigns = [
@@ -48,7 +52,8 @@ const Settings = props => {
     { designName: 'edge', text: 'Edge' },
     { designName: 'median', text: 'Median' },
     { designName: 'half', text: 'Half' },
-    { designName: 'adha', text: 'Adha' }
+    { designName: 'adha', text: 'Adha' },
+    { designName: 'snowy', text: 'Snowy' }
   ]
 
   // List of Form Designs
@@ -73,6 +78,7 @@ const Settings = props => {
               <Button
                 color="primary"
                 block
+                style={design === d.designName ? activeButtonStyle : {}}
                 onClick={() => setDesign(d.designName)}>
                 {d.text}
               </Button>
@@ -87,6 +93,7 @@ const Settings = props => {
               <Button
                 color="primary"
                 block
+                style={currentForm === s.formName ? activeButtonStyle : {}}
                 onClick={() => setCurrentForm(s.formName)}>
                 {s.text}
               </Button>

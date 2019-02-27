@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-import FormContainer from './FormContainer'
-import BackgroundOverlay from './BackgroundOverlay'
+import FormContainer from '../FormContainer'
+import BackgroundOverlay from '../BackgroundOverlay'
 
 const Half = props => {
   return (

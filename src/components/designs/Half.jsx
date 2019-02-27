@@ -1,10 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-import FormContainer from './FormContainer'
-import BackgroundOverlay from './BackgroundOverlay'
+import FormContainer from '../FormContainer'
+import BackgroundOverlay from '../BackgroundOverlay'
 
-import formalinLogo from '../assets/images/formalin.webp'
+import formalinLogo from '../../assets/images/formalin.webp'
 
 const Half = props => {
   return (

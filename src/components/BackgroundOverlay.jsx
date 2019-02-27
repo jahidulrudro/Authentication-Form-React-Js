@@ -2,6 +2,7 @@ import React from 'react'
 import Particles from 'react-particles-js'
 
 import bgImage from '../assets/images/snowBackground.jpg'
+import { snow, nightSky } from '../_particlesConfigs'
 
 const bgImageStyle = {
   backgroundImage: `url(${bgImage})`,
@@ -18,6 +19,11 @@ const bgImageStyle = {
   zIndex: -1
 }
 
+const bgGradientStyle = {
+  ...bgImageStyle,
+  background: 'linear-gradient(82deg, rgba(0,0,0,1) 0%, rgba(41,45,71,1) 100%)'
+}
+
 const particlesStyle = {
   ...bgImageStyle,
   background: 'rgba(0, 0, 0, 0.1)',
@@ -26,46 +32,15 @@ const particlesStyle = {
 
 export default class BackgroundOverlay extends React.PureComponent {
   render() {
+    const particlesParam = this.props.type === 'nightSky' ? nightSky : snow
+
     return (
       <React.Fragment>
         <Particles
           style={particlesStyle}
-          params={{
-            particles: {
-              number: {
-                value: 160,
-                density: {
-                  enable: false
-                }
-              },
-              size: {
-                value: 5,
-                random: true
-              },
-              move: {
-                direction: 'bottom',
-                out_mode: 'out'
-              },
-              line_linked: {
-                enable: false
-              }
-            },
-            interactivity: {
-              events: {
-                onclick: {
-                  enable: true,
-                  mode: 'remove'
-                }
-              },
-              modes: {
-                remove: {
-                  particles_nb: 10
-                }
-              }
-            }
-          }}
+          params={particlesParam}
         />
-        <div style={bgImageStyle} />
+        {this.props.type === 'nightSky' ? <div style={bgGradientStyle} /> : <div style={bgImageStyle} />}
       </React.Fragment>
     )
   }

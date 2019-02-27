@@ -12,11 +12,12 @@ const Adha = lazy(() => import('./components/designs/Adha'))
 const Snowy = lazy(() => import('./components/designs/Snowy'))
 const Edge = lazy(() => import('./components/designs/Edge'))
 const Median = lazy(() => import('./components/designs/Median'))
+const Night = lazy(() => import('./components/designs/Night'))
 
 const App = () => {
   // You can change the design to any of the below styles
-  // 'default', 'edge', 'median', 'half', 'adha', 'snowy'
-  const [design, setDesign] = useState('snowy')
+  // 'default', 'edge', 'median', 'half', 'adha', 'snowy', 'night'
+  const [design, setDesign] = useState('night')
 
   // You can change the form of any of the below types
   // login, register, recover-password, otp
@@ -46,6 +47,8 @@ const App = () => {
             <Adha commonProps={commonProps} />
           ) : design === 'snowy' ? (
             <Snowy commonProps={commonProps} />
+          ) : design === 'night' ? (
+            <Night commonProps={commonProps} />
           ) : null}
         </React.Suspense>
       </Container>

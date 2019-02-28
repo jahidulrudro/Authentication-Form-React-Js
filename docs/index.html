@@ -1,0 +1,260 @@
+<html lang="en-us"><!--<![endif]--><head>
+  <meta charset="utf-8">
+
+  <title>Invoice Maker using Django and Vue.js</title>
+
+  <meta name="author" content="Shakib">
+  <meta name="copyright" content="Enabled">
+  <link rel="stylesheet" href="css/documenter_style.css" media="all">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+  <script src="js/jquery.js"></script>
+
+  <style>
+    html {
+      background-color: #FFFFFF;
+      color: #383838;
+    }
+
+    ::-moz-selection {
+      background: #444444;
+      color: #DDDDDD;
+    }
+
+    ::selection {
+      background: #444444;
+      color: #DDDDDD;
+    }
+
+    #documenter_sidebar #documenter_logo {
+      background-image: url(css/img/logo.png);
+    }
+
+    a {
+      color: #0000FF;
+    }
+
+    hr {
+      border-top: 1px solid #EBEBEB;
+      border-bottom: 1px solid #FFFFFF;
+    }
+
+    #documenter_sidebar,
+    #documenter_sidebar ol a {
+      background-color: #2196F3;
+      color: #000;
+    }
+
+    #documenter_sidebar ol a {
+      color: #FFF;
+    }
+
+    #documenter_sidebar ol a:hover {
+      background: #3e3838;
+      color: #DDDDDD;
+      border-top: 1px solid #444444;
+    }
+
+    #documenter_sidebar ol a.current {
+      background: #3e3838;
+      color: #ffffff;
+      border-top: 1px solid #444444;
+    }
+
+    #documenter_copyright {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    div#documenter_sidebar h4 {
+      text-align: center;
+      font-size: 25px;
+      color: #fff;
+      margin: 50px 0;
+      font-weight: 700;
+    }
+
+    div#documenter_copyright p {
+      text-align: center;
+      color: #f7f7f7;
+      font-size: 14px;
+    }
+    #documenter_sidebar p {
+      color: #f7f7f7;
+      text-align: center;
+    }
+  </style>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="documenter_sidebar">
+    <h4>Formalin</h4>
+    <p>© Synchrotheme 2019</p>
+    <ol id="documenter_nav">
+      <li><a class="smoth-scroll" href="#documenter_cover">Start</a></li>
+      <li><a class="smoth-scroll" href="#structure">Files and folders structure</a></li>
+      <li><a class="smoth-scroll" href="#install">Installation</a></li>
+      <li><a class="smoth-scroll" href="#grid">Grid System</a></li>
+      <li><a class="smoth-scroll" href="#icons">Font Icons</a></li>
+      <li><a class="smoth-scroll" href="#admin-panel">Admin Panel</a></li>
+      <li><a class="smoth-scroll" href="#users">Users</a></li>
+      <li><a class="smoth-scroll" href="#items">Items</a></li>
+      <li><a class="smoth-scroll" href="#invoices">Invoices</a></li>
+      <li><a class="smoth-scroll" href="#clients">Clients</a></li>
+      <li><a class="smoth-scroll" href="#company">Company</a></li>
+      <li><a class="smoth-scroll" href="#generating-invoice">Generate Invoices</a></li>
+    </ol>
+  </div>
+  <div id="documenter_content">
+    <section id="documenter_cover">
+      <h1>Formalin</h1>
+      <h2>Beautiful forms for your React app</h2>
+      <hr>
+      <ul>
+        <li>Created: 28/02/2018</li>
+        <li>By: Synchrotheme</li>
+        <li>Email: <a href="mailto:info@synchronisebd.com ">info@synchronisebd.com </a></li>
+      </ul>
+      <p>
+        Thank you for purchasing <b>"Formalin - Invoice Generator"</b>.
+        If you have any questions that are beyond the scope of this help file,
+        please feel free to submit a ticket at our <a href="https://www.synchronisebd.com/ ">Support Forum</a>. Thanks so much!
+      </p>
+      <p>
+        <b>"Formalin"</b> is an authentication flow created using React.js and care.
+        It is fully responsive template based on Twitter Bootstrap framework.
+        It also uses the extensive Font Awesome Icons for its various icons.
+        Its not only responsive whereas it is retina ready also, now no blurry images on your HiDPI and retina devices.
+      </p>
+      <h2>How to use <b>Formalin</b>?</h2>
+      <p>
+        <b>"Formalin"</b> is very easy to update and modify, it will adapt your website and brand in no time.
+        Steps for modification and updating are described step by step in this exclusive documentation.
+      </p>
+    </section>
+
+    <section id="structure">
+      <h2>Files and folders structure</h2>
+      <hr>
+      <p>
+        Whole app is divided in to several directories and subdirectories.
+        The whole app consists of React components, subcomponents.
+        The whole directory structure is given below.
+        The work of every component and subcomponent can be easily understood by their name.
+      </p>
+      <p>
+        <small>
+        <b>P.S.</b> This directory structure is adopted from <kbd>create-react-app</kbd>. <br>
+        </small>
+      </p>
+      <pre>
+├── package.json            // The package.json file containing all the dependencies and scripts
+├── package-lock.json       // Locks the version of the packages installed through npm
+├── public                  // This directory contains all the public files
+└── src                     // The main directory that contains all the app specific code           
+    ├── assets              // This directory contains all the assets necessary for the app
+    │   ├── css             
+    │   └── images
+    └── components          // This directory contains all the components used in the App
+        └── designs         // All the available designs are available in this component
+      </pre>
+    </section>
+    <section id="install">
+      <h2>Setup the app</h2>
+      <hr>
+      <p>
+        </p><ul>
+          <li>
+            Install <a href="https://nodejs.org/en/download/"><kbd>npm</kbd></a>.</li>
+          <li>
+            Install all the required javascript dependencies
+            <pre>npm install</pre>
+          </li>
+          <li>
+            Build for Production
+            <pre>npm run build</pre>
+          </li>
+        </ul>
+        After building for production it will create a <kbd>build</kbd> directory in the root directory.
+        You will upload the content of this directory to your server.
+        <br>
+        <small>
+          <b>P.S.</b> Everytime you change anything in the source code you must run <pre>build</pre> and upload the updated content to your server.</small>
+      <p></p>
+
+      <h2>INSTALLATION ON YOUR SERVER</h2>
+      <hr>
+      <p>
+        After building the template for production you can easily deploy the app to your server.<br>
+        <strong>Step 1</strong> - Upload to the server<br>
+        <strong>Step 2</strong> - Php based server should by default serve the index.html from the build directory.<br>
+        server.<br>
+      </p>
+      <br><br>
+
+      <h2>Testing Locally</h2>
+      <hr>
+      <p>
+        You can test the app locally easily with the below steps:
+      </p>
+      <ul>
+        <li>Run the local server: <kbd>npm run start</kbd></li>
+      </ul>
+
+    </section>
+    <section id="grid">
+      <h2>Grid system</h2>
+      <hr>
+      <p>
+        <b>"Formalin"</b> is based upon Twitter Bootstrap css framework that is very easy to use and adapt. It follows the
+        mobile first approach to make the website readily available for all devices and screen sizes. Bootstrap grid is
+        based upon 12 columns that are well defined in the bootstrap.css file inside the css folder. You can get to
+        know about the grid system in detail from this url <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a></p>
+      <p>We used a package called <kbd>reactstrap</kbd> to implement the Bootstrap 4 Grid into the template. You
+        can find out more about the package here: <a href="http://reactstrap.github.io/">http://reactstrap.github.io/</a>.
+      </p>
+    </section>
+
+    <section id="icons">
+      <h2>Icons font</h2>
+      <hr>
+      <h3>Font Awesome</h3>
+      <p><b>"Formalin"</b> uses font awesome icon fonts for its icons requirement and no images has been used for any icon. A
+        complete list of icons along with the class names can be found here: <a href="https://fontawesome.com/icons?d=gallery&amp;m=free">https://fontawesome.com/icons</a></p>
+      <p>
+        We used the <kbd>react-fontawesome</kbd> package to implement the FontAwesome Icons into the template.
+        To know how to use the package goto <a href="https://github.com/FortAwesome/react-fontawesome">this</a>
+        link.
+      </p>
+      <br>
+    </section>
+
+    <section id="designs">
+      <h2>Designs</h2>
+      <hr>
+      <p>
+        <b>"Formalin"</b> provides 10 designs that you can choose from.
+        You can find all the designs in the <kbd>src/components/designs</kbd> directory.
+        In the demo we are using a state to switch between designs but in your use case you
+        might want to just render the design component that you need.
+        The available options are:
+        <ul>
+          <li>Default</li>
+          <li>Edge</li>
+          <li>Median</li>
+          <li>Night</li>
+          <li>Owl</li>
+          <li>Comet</li>
+          <li>Half</li>
+          <li>Incomplete</li>
+          <li>Snowy</li>
+          <li></li>
+        </ul>
+      </p>
+    </section> 
+  </div>
+
+
+</body>
+</html>

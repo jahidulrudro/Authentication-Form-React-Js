@@ -63,9 +63,6 @@ export default class RegistrationForm extends React.PureComponent {
         className="generic-form"
         method="POST"
         onSubmit={this.onSubmit}>
-        <h3>Sign Up</h3>
-        <p>Create your account to access Formalin</p>
-
         <p className="text-center font-weight-bold">Register With</p>
         <p className="d-flex" style={{ justifyContent: 'center' }}>
           <Button color="danger" className="mr-1">

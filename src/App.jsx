@@ -13,11 +13,15 @@ const Snowy = lazy(() => import('./components/designs/Snowy'))
 const Edge = lazy(() => import('./components/designs/Edge'))
 const Median = lazy(() => import('./components/designs/Median'))
 const Night = lazy(() => import('./components/designs/Night'))
+const Owl = lazy(() => import('./components/designs/Owl'))
+const Comet = lazy(() => import('./components/designs/Comet'))
 
 const App = () => {
   // You can change the design to any of the below styles
-  // 'default', 'edge', 'median', 'half', 'adha', 'snowy', 'night'
-  const [design, setDesign] = useState('night')
+  // 'default', 'edge', 'median',
+  // 'half', 'adha', 'snowy',
+  // 'night', 'owl', 'comet'
+  const [design, setDesign] = useState('half')
 
   // You can change the form of any of the below types
   // login, register, recover-password, otp
@@ -49,6 +53,10 @@ const App = () => {
             <Snowy commonProps={commonProps} />
           ) : design === 'night' ? (
             <Night commonProps={commonProps} />
+          ) : design === 'owl' ? (
+            <Owl commonProps={commonProps} />
+          ) : design === 'comet' ? (
+            <Comet commonProps={commonProps} />
           ) : null}
         </React.Suspense>
       </Container>

@@ -34,8 +34,10 @@ export default class PasswordRecoverForm extends React.PureComponent {
         onSubmit={this.onSubmit}
         className="generic-form"
         method="POST">
-        <h3>Reset Password</h3>
-        <p>Enter your e-mail address below to reset password</p>
+        <h3 className="text-center">Reset Password</h3>
+        <p className="text-center">
+          Enter your e-mail address below to reset password
+        </p>
 
         {/* Email Input */}
         <IconInput

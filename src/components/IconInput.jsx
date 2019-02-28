@@ -6,15 +6,16 @@ const IconInputStyle = {
 }
 
 const CustomInput = props => {
-  const { feedbackText } = props
-
-  // Removing to avoid 'invalid prop on DOM element' error
-  delete props.feedbackText
+  const { feedbackText, ...inputProps } = props
 
   return (
     <FormGroup className="input-container">
-      <Input {...props} style={IconInputStyle} />
-      {feedbackText ? <FormFeedback>{feedbackText}</FormFeedback> : ''}
+      <Input {...inputProps} style={IconInputStyle} />
+      {feedbackText ? (
+        <FormFeedback valid={!inputProps.invalid}>{feedbackText}</FormFeedback>
+      ) : (
+        ''
+      )}
     </FormGroup>
   )
 }

@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap'
 
 import FormContainer from '../FormContainer'
 import BackgroundOverlay from '../BackgroundOverlay'
+import SideHeader from '../SideHeader'
 
 const Half = props => {
   return (
@@ -17,9 +18,7 @@ const Half = props => {
           </Row>
         </Col>
 
-        <Col className="d-none d-md-flex">
-          <h1 className="w-100 text-center">Formalin</h1>
-        </Col>
+        <SideHeader />
       </Row>
     </React.Fragment>
   )

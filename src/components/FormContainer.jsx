@@ -26,7 +26,7 @@ const FormContainer = props => {
       <img
         src={formalinLogo}
         alt="formalin logo"
-        className="mx-auto d-block d-md-none"
+        className="mx-auto d-block mb-3"
         style={{ width: '120px' }}
       />
       {currentForm === 'login' ? (

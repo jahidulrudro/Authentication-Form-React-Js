@@ -63,9 +63,6 @@ export default class LoginForm extends React.PureComponent {
         className="generic-form"
         method="POST"
         onSubmit={this.onSubmit}>
-        <h3>Login</h3>
-        <p>Login or Create an account to access Formalin</p>
-
         <p className="text-center font-weight-bold">Login With</p>
         <p className="d-flex" style={{ justifyContent: 'center' }}>
           <Button color="danger" className="mr-1" onClick={() => {}}>
@@ -93,6 +90,7 @@ export default class LoginForm extends React.PureComponent {
           onFocus={() => this.setState({ invalidEmail: false })}
           value={email}
           invalid={invalidEmail}
+          feedbackText="Enter a valid email address"
         />
 
         {/* Password Input */}
@@ -107,6 +105,7 @@ export default class LoginForm extends React.PureComponent {
           onFocus={() => this.setState({ invalidPassword: false })}
           value={password}
           invalid={invalidPassword}
+          feedbackText="Password must contain at least 1 digit"
         />
 
         <Row className="mb-2">

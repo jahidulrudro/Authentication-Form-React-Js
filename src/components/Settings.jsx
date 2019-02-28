@@ -53,7 +53,10 @@ const Settings = props => {
     { designName: 'median', text: 'Median' },
     { designName: 'half', text: 'Half' },
     { designName: 'adha', text: 'Adha' },
-    { designName: 'snowy', text: 'Snowy' }
+    { designName: 'snowy', text: 'Snowy' },
+    { designName: 'night', text: 'Night' },
+    { designName: 'owl', text: 'Owl' },
+    { designName: 'comet', text: 'Comet' }
   ]
 
   // List of Form Designs
@@ -66,6 +69,7 @@ const Settings = props => {
 
   return (
     <div
+      className="d-none d-md-block"
       style={visible ? settingsContainerStyle : settingsContainerHiddenStyle}>
       <div style={settingsIconStyle} onClick={() => setVisible(!visible)}>
         <FontAwesomeIcon icon="spinner" className="fa-pulse" size="2x" />

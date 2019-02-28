@@ -52,11 +52,12 @@ const Settings = props => {
     { designName: 'edge', text: 'Edge' },
     { designName: 'median', text: 'Median' },
     { designName: 'half', text: 'Half' },
-    { designName: 'adha', text: 'Adha' },
+    { designName: 'incomplete', text: 'Incomplete' },
     { designName: 'snowy', text: 'Snowy' },
     { designName: 'night', text: 'Night' },
     { designName: 'owl', text: 'Owl' },
-    { designName: 'comet', text: 'Comet' }
+    { designName: 'comet', text: 'Comet' },
+    { designName: 'gradient', text: 'Gradient' }
   ]
 
   // List of Form Designs

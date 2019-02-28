@@ -24,6 +24,12 @@ const bgGradientStyle = {
   background: 'linear-gradient(82deg, rgba(0,0,0,1) 0%, rgba(41,45,71,1) 100%)'
 }
 
+const bgGradientAnimatedStyle = {
+  ...bgGradientStyle,
+  backgroundSize: '400% 400%',
+  animation: 'Gradient 15s ease infinite'
+}
+
 const particlesStyle = {
   ...bgImageStyle,
   background: 'rgba(0, 0, 0, 0.1)',
@@ -32,13 +38,21 @@ const particlesStyle = {
 
 export default class BackgroundOverlay extends React.PureComponent {
   render() {
-    const particlesParam = this.props.type === 'nightSky' ? nightSky : snow
+    const { type } = this.props
+    const particlesParam = type === 'nightSky' ? nightSky : snow
 
     return (
       <React.Fragment>
-        <Particles style={particlesStyle} params={particlesParam} />
-        {this.props.type === 'nightSky' ? (
-          <div style={bgGradientStyle} />
+        {type !== 'gradientAnimation' && (
+          <Particles style={particlesStyle} params={particlesParam} />
+        )}
+
+        {type === 'nightSky' || type === 'gradientAnimation' ? (
+          <div
+            style={
+              type === 'nightSky' ? bgGradientStyle : bgGradientAnimatedStyle
+            }
+          />
         ) : (
           <div style={bgImageStyle} />
         )}

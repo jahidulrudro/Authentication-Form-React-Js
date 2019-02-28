@@ -130,8 +130,8 @@ export default class LoginForm extends React.PureComponent {
           {/* Forgot Password */}
           <Col xs="6" className="text-right">
             <Button
+              className="text-right p-0"
               color="link"
-              className="p-0"
               onClick={() => setCurrentForm('recover-password')}>
               Forgot Password?
             </Button>

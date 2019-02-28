@@ -8,19 +8,20 @@ import Settings from './components/Settings'
 
 const Default = lazy(() => import('./components/designs/Default'))
 const Half = lazy(() => import('./components/designs/Half'))
-const Adha = lazy(() => import('./components/designs/Adha'))
+const Incomplete = lazy(() => import('./components/designs/Incomplete'))
 const Snowy = lazy(() => import('./components/designs/Snowy'))
 const Edge = lazy(() => import('./components/designs/Edge'))
 const Median = lazy(() => import('./components/designs/Median'))
 const Night = lazy(() => import('./components/designs/Night'))
 const Owl = lazy(() => import('./components/designs/Owl'))
 const Comet = lazy(() => import('./components/designs/Comet'))
+const Gradient = lazy(() => import('./components/designs/Gradient'))
 
 const App = () => {
   // You can change the design to any of the below styles
   // 'default', 'edge', 'median',
-  // 'half', 'adha', 'snowy',
-  // 'night', 'owl', 'comet'
+  // 'half', 'incomplete', 'snowy',
+  // 'night', 'owl', 'comet', 'gradient'
   const [design, setDesign] = useState('half')
 
   // You can change the form of any of the below types
@@ -47,8 +48,8 @@ const App = () => {
             <Median commonProps={commonProps} />
           ) : design === 'half' ? (
             <Half commonProps={commonProps} />
-          ) : design === 'adha' ? (
-            <Adha commonProps={commonProps} />
+          ) : design === 'incomplete' ? (
+            <Incomplete commonProps={commonProps} />
           ) : design === 'snowy' ? (
             <Snowy commonProps={commonProps} />
           ) : design === 'night' ? (
@@ -57,6 +58,8 @@ const App = () => {
             <Owl commonProps={commonProps} />
           ) : design === 'comet' ? (
             <Comet commonProps={commonProps} />
+          ) : design === 'gradient' ? (
+            <Gradient commonProps={commonProps} />
           ) : null}
         </React.Suspense>
       </Container>

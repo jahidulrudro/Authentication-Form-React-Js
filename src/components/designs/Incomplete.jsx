@@ -5,7 +5,7 @@ import FormContainer from '../FormContainer'
 import BackgroundOverlay from '../BackgroundOverlay'
 import SideHeader from '../SideHeader'
 
-const Half = props => {
+const Incomplete = props => {
   return (
     <React.Fragment>
       <BackgroundOverlay />
@@ -24,4 +24,4 @@ const Half = props => {
   )
 }
 
-export default Half
+export default Incomplete

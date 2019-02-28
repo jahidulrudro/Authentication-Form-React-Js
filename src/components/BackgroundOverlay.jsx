@@ -36,11 +36,12 @@ export default class BackgroundOverlay extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Particles
-          style={particlesStyle}
-          params={particlesParam}
-        />
-        {this.props.type === 'nightSky' ? <div style={bgGradientStyle} /> : <div style={bgImageStyle} />}
+        <Particles style={particlesStyle} params={particlesParam} />
+        {this.props.type === 'nightSky' ? (
+          <div style={bgGradientStyle} />
+        ) : (
+          <div style={bgImageStyle} />
+        )}
       </React.Fragment>
     )
   }

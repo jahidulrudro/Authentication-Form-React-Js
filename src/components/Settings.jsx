@@ -43,7 +43,7 @@ const activeButtonStyle = {
 }
 
 const Settings = props => {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const { currentForm, setCurrentForm, design, setDesign } = props.commonProps
 
   // List of Page Designs

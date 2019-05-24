@@ -1,7 +1,7 @@
 import React from 'react'
 import Particles from 'react-particles-js'
 
-import bgImage from '../assets/images/snowBackground.jpg'
+import bgImage from '../assets/images/dummySnowBackground.jpg'
 import { snow, nightSky } from '../_particlesConfigs'
 
 const bgImageStyle = {

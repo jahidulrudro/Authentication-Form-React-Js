@@ -1,7 +1,7 @@
 import React, { lazy, useState } from 'react'
 import { Container } from 'reactstrap'
 
-import logoImage from './assets/images/logoImage.png'
+import logoImage from './assets/images/dummyLogoImage.png'
 
 import Loading from './components/Loading'
 import Settings from './components/Settings'

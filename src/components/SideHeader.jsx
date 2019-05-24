@@ -15,7 +15,7 @@ const SideHeader = () => {
       <p className="h5 w-60 text-center subtitle">
         Beautiful Forms for your React App
       </p>
-      <ul className="d-flex justify-content-center align-items-center list-unstyled mt-2">
+      <ul className="d-flex justify-content-center align-items-center list-unstyled mt-2 social-links">
         <li
           className="rounded-circle px-2 py-1 mr-1 text-center"
           style={{ width: '32px', backgroundColor: '#3b5998' }}>

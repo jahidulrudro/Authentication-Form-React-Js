@@ -53,7 +53,7 @@ export default class OtpForm extends React.PureComponent {
         onSubmit={this.onSubmit}
         className="generic-form"
         method="POST">
-        <div style={imageContainerStyle} className="mx-auto mb-2">
+        <div style={imageContainerStyle} className="mx-auto my-2">
           <img src={avatar} alt="Avatar" className="img-fluid" />
         </div>
         <p className="text-center">

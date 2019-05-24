@@ -8,6 +8,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif !important;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 @keyframes Gradient {
@@ -20,4 +22,11 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.social-links li {
+  transition: transform 0.3s ease-in-out;
+}
+.social-links li:hover {
+  transform: translateY(-3px);
 }
